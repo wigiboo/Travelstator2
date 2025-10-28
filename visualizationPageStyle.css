@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: linear-gradient(to bottom, #0a0e0a, #1a2e1a);
+	margin: 0; 
+	padding: 0;
+	text-align: center; 
+	color: #e8fde8;
+}
+
+
+
+
+.VisualizationMainPage #mainContent {
+	background: #0f1610;
+}
+
+
+
+.VisualizationMainPage #container {
+	background: #ffffff;
+	text-align: left; 
+}
+
+
+.VisualizationMainPage #algoControlSection {
+	background: #0f1610;
+	color: #e8fde8;
+	border: 2px solid #1a3a1a;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 15px;
+	box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+
+.VisualizationMainPage #generalAnimationControlSection {
+	background: #0f1610;
+	color: #e8fde8;
+	border: 2px solid #1a3a1a;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 15px;
+	box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+.VisualizationMainPage #header { 
+	background: linear-gradient(to right, #0a0e0a, #0f1610);
+	border-bottom: 2px solid #00ff88;
+	box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
+	color: #00ff88;
+	padding: 0 10px 0 20px;
+} 
+ 
+.VisualizationMainPage #header A:visited { 
+	text-decoration: none;
+	color: #7fb87f;
+}
+
+.VisualizationMainPage #header h1 {
+	margin: 0; 
+	padding: 10px 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
+}
+
+.VisualizationMainPage #header A:link {
+	text-decoration: none;
+	color: #00ff88;
+}
+	
+	
+.VisualizationMainPage #container {
+	background: #0f1610;
+	margin: 0 auto; 
+	text-align: left;
+	border-radius: 12px;
+}
+	
+	
+.VisualizationMainPage #footer A:visited { 
+	text-decoration: none;
+	color: #7fb87f;
+}
+
+.VisualizationMainPage #footer A:link {
+	text-decoration: none;
+	color: #00ff88;
+}
+
+
+	
+
+.VisualizationMainPage #mainContent h1 {
+	padding: 0 20px; 
+	background: transparent;
+	color: #00ff88;
+	text-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
+}
+
+.VisualizationMainPage #mainContent h2 {
+	padding: 0 20px; 
+	background: transparent;
+	color: #00ff88;
+}
+
+.VisualizationMainPage #mainContent h3 {
+	padding: 0 20px; 
+	background: transparent;
+	color: #00cc6a;
+}
+
+
+
+.VisualizationMainPage #footer { 
+	padding: 0 10px;
+	background: linear-gradient(to right, #0a0e0a, #0f1610);
+	border-top: 2px solid #00ff88;
+	box-shadow: 0 -4px 20px rgba(0, 255, 136, 0.4);
+	color: #e8fde8;
+}
+
+.VisualizationMainPage #footer p {
+	margin: 0; 
+	padding: 10px 0;
+}
+
+EM {text-decoration: bold;}
+
+/* Matrix Cyberpunk Theme Additions */
+
+/* Button styling */
+.VisualizationMainPage button, .VisualizationMainPage input[type="button"] {
+	background: linear-gradient(to bottom, #00ff88, #00cc6a);
+	color: #0a0e0a;
+	border: 2px solid #00ff88;
+	border-radius: 8px;
+	padding: 10px 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.VisualizationMainPage button:hover, .VisualizationMainPage input[type="button"]:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 0 20px rgba(0, 255, 136, 0.6), 0 5px 15px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(to bottom, #00ffaa, #00ff88);
+}
+
+.VisualizationMainPage button:active, .VisualizationMainPage input[type="button"]:active {
+	transform: translateY(0);
+	box-shadow: 0 0 15px rgba(0, 255, 136, 0.8);
+}
+
+.VisualizationMainPage button:disabled, .VisualizationMainPage input[type="button"]:disabled {
+	background: #1a3a1a;
+	color: #7fb87f;
+	border-color: #1a3a1a;
+	box-shadow: none;
+	cursor: not-allowed;
+}
+
+/* Table styling */
+.VisualizationMainPage table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.VisualizationMainPage table button {
+	margin: 5px;
+}
+
+/* Canvas area styling */
+.VisualizationMainPage canvas {
+	border: 2px solid #1a3a1a;
+	border-radius: 8px;
+	background: #dff7df;
+	box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+	margin: 10px auto;
+	display: block;
+}
+
+/* Text input styling */
+.VisualizationMainPage input[type="text"], .VisualizationMainPage input[type="number"] {
+	background: #0f1610;
+	color: #e8fde8;
+	border: 2px solid #1a3a1a;
+	border-radius: 5px;
+	padding: 8px;
+	transition: all 0.3s ease;
+}
+
+.VisualizationMainPage input[type="text"]:focus, .VisualizationMainPage input[type="number"]:focus {
+	outline: none;
+	border-color: #00ff88;
+	box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+/* jQuery UI Slider custom styling */
+.ui-slider {
+	background: #0f1610 !important;
+	border: 2px solid #1a3a1a !important;
+}
+
+.ui-slider-handle {
+	background: linear-gradient(to bottom, #00ff88, #00cc6a) !important;
+	border: 2px solid #00ff88 !important;
+	box-shadow: 0 0 10px rgba(0, 255, 136, 0.5) !important;
+}
+
+.ui-slider-range {
+	background: linear-gradient(to bottom, #00ff88, #00cc6a) !important;
+	box-shadow: 0 0 10px rgba(0, 255, 136, 0.3) !important;
+}

@@ -64,10 +64,37 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>TopologicalSortDFS(graph):
+  visited = set()
+  result = []
+  
+  for each vertex in graph:
+    if vertex not in visited:
+      DFS(vertex, visited, result)
+  
+  return reverse(result)
+
+DFS(node, visited, result):
+  visited.add(node)
+  
+  for neighbor in graph[node]:
+    if neighbor not in visited:
+      DFS(neighbor, visited, result)
+  
+  result.append(node)</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Sorts vertices of a directed acyclic graph such that for every edge (u,v), u comes before v in the ordering. Uses DFS to visit nodes and adds them to result after visiting all descendants.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

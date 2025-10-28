@@ -248,8 +248,8 @@ AnimatedLinkedList.prototype.draw = function(context)
 	
 	if (this.highlighted)
 	{
-		context.strokeStyle = "#ff0000";
-		context.fillStyle = "#ff0000";
+		context.strokeStyle = "#00ff88";
+		context.fillStyle = "#00ff88";
 		
 		context.beginPath();
 		context.moveTo(startX - this.highlightDiff,startY- this.highlightDiff);
@@ -287,7 +287,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.moveTo(startX ,startY);
 			context.lineTo(startX + this.w, startY);
 			context.closePath();
+			context.strokeStyle = "#ffffff";
 			context.stroke();
+			context.strokeStyle = this.foregroundColor;
 		}
 	}
 	else
@@ -300,7 +302,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.moveTo(startX ,startY);
 			context.lineTo(startX, startY + this.h);
 			context.closePath();
+			context.strokeStyle = "#ffffff";
 			context.stroke();
+			context.strokeStyle = this.foregroundColor;
 		}			
 	}
 	
@@ -318,7 +322,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.lineTo(this.startX + this.w, this.bottom());
 		}
 		context.closePath();
-		context.stroke();		
+		context.strokeStyle = "#ffffff";
+		context.stroke();
+		context.strokeStyle = this.foregroundColor;		
 	}
 	else if (this.vertical && !this.linkPositionEnd)
 	{
@@ -333,7 +339,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.lineTo(startX + this.w, this.top());
 		}
 		context.closePath();
-		context.stroke();	
+		context.strokeStyle = "#ffffff";
+		context.stroke();
+		context.strokeStyle = this.foregroundColor;	
 		
 	}
 	else if  (!this.vertical && this.linkPositionEnd)
@@ -349,7 +357,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.lineTo(this.right(), startY + this.h);
 		}
 		context.closePath();
-		context.stroke();		
+		context.strokeStyle = "#ffffff";
+		context.stroke();
+		context.strokeStyle = this.foregroundColor;		
 		
 	}
 	else // (!vertical && !linkPositionEnd)
@@ -365,7 +375,9 @@ AnimatedLinkedList.prototype.draw = function(context)
 			context.lineTo(this.left(), startY);
 		}
 		context.closePath();
-		context.stroke();	
+		context.strokeStyle = "#ffffff";
+		context.stroke();
+		context.strokeStyle = this.foregroundColor;	
 	}
 	
 	

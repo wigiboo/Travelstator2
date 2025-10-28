@@ -222,7 +222,7 @@ function doPlayPause()
 	paused = !paused;
 	if (paused)
 	{
-		playPauseBackButton.setAttribute("value", "▶");
+		playPauseBackButton.setAttribute("value", "play");
 		if (skipBackButton.disabled == false)
 		{
 			stepBackButton.disabled = false;		
@@ -231,7 +231,7 @@ function doPlayPause()
 	}
 	else
 	{
-		playPauseBackButton.setAttribute("value", "⏸");	
+		playPauseBackButton.setAttribute("value", "pause");	
 	}
 	animationManager.SetPaused(paused);
 }
@@ -288,15 +288,15 @@ function initCanvas()
 	objectManager = new ObjectManager();
 	animationManager = new AnimationManager(objectManager);
 	
-	skipBackButton = addControlToAnimationBar("Button", "⏮");
+	skipBackButton = addControlToAnimationBar("Button", "Skip Back");
 	skipBackButton.onclick = animationManager.skipBack.bind(animationManager);
-	stepBackButton = addControlToAnimationBar("Button", "◀");
+	stepBackButton = addControlToAnimationBar("Button", "Step Back");
 	stepBackButton.onclick = animationManager.stepBack.bind(animationManager);
-	playPauseBackButton = addControlToAnimationBar("Button", "▶");
+	playPauseBackButton = addControlToAnimationBar("Button", "Pause");
 	playPauseBackButton.onclick = doPlayPause ;
-	stepForwardButton = addControlToAnimationBar("Button", "▶▶");
+	stepForwardButton = addControlToAnimationBar("Button", "Step Forward");
 	stepForwardButton.onclick = animationManager.step.bind(animationManager) ;
-	skipForwardButton = addControlToAnimationBar("Button", "⏭");
+	skipForwardButton = addControlToAnimationBar("Button", "Skip Forward");
 	skipForwardButton.onclick = animationManager.skipForward.bind(animationManager);
 	
 	
@@ -426,9 +426,8 @@ function initCanvas()
 	sizeButton.onclick = animationManager.changeSize.bind(animationManager) ;
 	
 
-        // Move Controls removed - replaced with pseudocode section
-        // swapButton = addControlToAnimationBar("Button", "Move Controls");
-        // swapButton.onclick = swapControlDiv;	
+        swapButton = addControlToAnimationBar("Button", "Move Controls");
+        swapButton.onclick = swapControlDiv;	
 	
 	
 	animationManager.addListener("AnimationStarted", this, animStarted);
@@ -704,23 +703,6 @@ function AnimationManager(objectManager)
 				anyAnimations = true;
 			}
 			
-			else if (nextCommand[0].toUpperCase() == "MOVETOALIGNRIGHT")
-			{
-				var id = parseInt(nextCommand[1]);
-				var otherId = parseInt(nextCommand[2]);
-                                var newXY = this.animatedObjects.getAlignRightPos(id, otherId);
-
-
-				var nextAnim =  new SingleAnimation(id,
-								    this.animatedObjects.getNodeX(id), 
-								    this.animatedObjects.getNodeY(id), 
-								    newXY[0],
-								    newXY[1]);
-				this.currentBlock.push(nextAnim);
-				undoBlock.push(new UndoMove(nextAnim.objectID, nextAnim.toX, nextAnim.toY, nextAnim.fromX, nextAnim.fromY));
-				anyAnimations = true;
-			}
-
 			else if (nextCommand[0].toUpperCase() == "STEP")
 			{
 				foundBreak = true;
@@ -976,11 +958,6 @@ function AnimationManager(objectManager)
 				undoBlock.push(new UndoSetPosition(id, oldX. oldY));
 				this.animatedObjects.alignBottom(id, parseInt(nextCommand[2]));
 			}
-
-
-
-
-
 			else if (nextCommand[0].toUpperCase() == "SETHIGHLIGHTINDEX")
 			{
 				var id = parseInt(nextCommand[1]);

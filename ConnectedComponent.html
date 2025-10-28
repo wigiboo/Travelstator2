@@ -64,10 +64,30 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>ConnectedComponents(graph):
+  visited = set()
+  components = []
+  
+  for each vertex in graph:
+    if vertex not in visited:
+      component = []
+      DFS(vertex, visited, component)
+      components.append(component)
+  
+  return components</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Finds all connected components in an undirected graph using DFS or BFS. Each component contains vertices reachable from each other. Useful for network analysis and image segmentation.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

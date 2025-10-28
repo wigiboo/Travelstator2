@@ -63,10 +63,33 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>BFS(graph, start):
+  queue = [start]
+  visited = set()
+  
+  while queue is not empty:
+    current = queue.dequeue()
+    
+    if current not in visited:
+      visited.add(current)
+      process current
+      
+      for neighbor in graph[current]:
+        if neighbor not in visited:
+          queue.enqueue(neighbor)</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						BFS explores a graph level by level, starting from the root node. It uses a queue to keep track of nodes to visit, ensuring all nodes at the current depth are explored before moving to the next level. Perfect for finding shortest paths in unweighted graphs.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

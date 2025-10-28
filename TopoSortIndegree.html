@@ -64,10 +64,34 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>TopologicalSortIndegree(graph):
+  indegree = calculate_indegree(graph)
+  queue = vertices with indegree 0
+  result = []
+  
+  while queue is not empty:
+    current = queue.dequeue()
+    result.append(current)
+    
+    for neighbor in graph[current]:
+      indegree[neighbor] -= 1
+      if indegree[neighbor] == 0:
+        queue.enqueue(neighbor)
+  
+  return result</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Uses Kahn's algorithm with an indegree-based approach. Starts with vertices having no incoming edges and removes them, repeating until all vertices are processed. Efficient BFS-based topological sorting.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

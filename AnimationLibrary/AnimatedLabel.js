@@ -32,7 +32,7 @@ function AnimatedLabel(id, val, center, initialWidth)
 	this.objectID = id;
 	this.alpha = 1.0;
 	this.addedToScene = true;
-	this.labelColor = "#000000";
+	this.labelColor = "#e8fde8";
 	this.textWidth = 0;
 	if (initialWidth != undefined)
 	{
@@ -100,8 +100,8 @@ AnimatedLabel.prototype.draw = function(ctx)
 	}
 	if (this.highlighted)
 	{
-	    ctx.strokeStyle = "#ffaaaa";
-	    ctx.fillStyle = "#ff0000";
+	    ctx.strokeStyle = "#00ff88";
+	    ctx.fillStyle = "#00ff88";
 		ctx.lineWidth = this.highlightDiff;
 		ctx.strokeText(this.label, this.x, this.y);		
 		//ctx.fillText(this.label, this.x, this.y);
@@ -122,8 +122,8 @@ AnimatedLabel.prototype.draw = function(ctx)
                     var highlightStr = this.label.substring(this.highlightIndex, this.highlightIndex + 1)
                     var rightStr = this.label.substring(this.highlightIndex + 1)
                     ctx.fillText(leftStr, startingXForHighlight, this.y)
- 	            ctx.strokeStyle = "#FF0000";
-	            ctx.fillStyle = "#FF0000";
+ 	            ctx.strokeStyle = "#00ff88";
+	            ctx.fillStyle = "#00ff88";
                     ctx.fillText(highlightStr, startingXForHighlight + this.leftWidth, this.y)
 
 

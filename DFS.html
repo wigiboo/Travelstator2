@@ -64,10 +64,33 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>DFS(graph, start):
+  visited = set()
+  stack = [start]
+  
+  while stack is not empty:
+    current = stack.pop()
+    
+    if current not in visited:
+      visited.add(current)
+      process current
+      
+      for neighbor in graph[current]:
+        if neighbor not in visited:
+          stack.push(neighbor)</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						DFS explores a graph as far as possible along each branch before backtracking. It uses a stack to explore deeper nodes first. Ideal for pathfinding, topological sorting, and detecting cycles.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

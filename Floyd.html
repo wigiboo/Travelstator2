@@ -63,10 +63,29 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>FloydWarshall(graph):
+  dist = graph adjacency matrix
+  for k in range(V):
+    for i in range(V):
+      for j in range(V):
+        dist[i][j] = min(
+          dist[i][j],
+          dist[i][k] + dist[k][j]
+        )
+  return dist</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Finds shortest paths between all pairs of vertices in a weighted graph. Works with negative edges (but not negative cycles). Uses dynamic programming with O(V³) time complexity.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

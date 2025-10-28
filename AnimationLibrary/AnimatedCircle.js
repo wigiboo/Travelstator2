@@ -90,7 +90,7 @@ AnimatedCircle.prototype.draw = function(ctx)
 
 	if (this.highlighted)
 	{
-		ctx.fillStyle = "#ff0000";
+		ctx.fillStyle = "#00ff88";
 		ctx.beginPath();
 		ctx.arc(this.x,this.y,this.radius + this.highlightDiff,0,Math.PI*2, true);
 		ctx.closePath();
@@ -130,8 +130,8 @@ AnimatedCircle.prototype.draw = function(ctx)
                     var highlightStr = this.label.substring(this.highlightIndex, this.highlightIndex + 1)
                     var rightStr = this.label.substring(this.highlightIndex + 1)
                     ctx.fillText(leftStr, startingXForHighlight, this.y)
- 	            ctx.strokeStyle = "#FF0000";
-	            ctx.fillStyle = "#FF0000";
+ 	            ctx.strokeStyle = "#00ff88";
+	            ctx.fillStyle = "#00ff88";
                     ctx.fillText(highlightStr, startingXForHighlight + this.leftWidth, this.y)
 
 

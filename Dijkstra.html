@@ -64,10 +64,35 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>Dijkstra(graph, start):
+  dist = {all nodes: infinity}
+  dist[start] = 0
+  pq = priority queue([start, 0])
+  visited = set()
+  
+  while pq is not empty:
+    current = extract_min(pq)
+    if current in visited: continue
+    visited.add(current)
+    
+    for neighbor, weight in graph[current]:
+      new_dist = dist[current] + weight
+      if new_dist < dist[neighbor]:
+        dist[neighbor] = new_dist
+        pq.push([neighbor, new_dist])</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Dijkstra's algorithm finds the shortest path from a source node to all other nodes in a weighted graph. It uses a priority queue to greedily select the closest unvisited node, guaranteeing the shortest path once a node is processed.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

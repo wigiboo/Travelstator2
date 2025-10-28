@@ -31,14 +31,14 @@ function AnimatedObject()
 
 AnimatedObject.prototype.init  = function()
 {
-	this.backgroundColor = "#FFFFFF";
-	this.foregroundColor = "#000000";
+	this.backgroundColor = "#7fb87f";
+	this.foregroundColor = "#0a0e0a";
 	this.highlighted = false;
 	this.objectID = -1;
 	this.layer = 0;
 	this.addedToScene = true;
 	this.label = "";
-	this.labelColor = "#000000";
+	this.labelColor = "#0a0e0a";
 	this.alpha = 1.0;
 	this.x = 0;
 	this.y = 0;

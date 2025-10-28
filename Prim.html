@@ -41,7 +41,7 @@
 		<div id = "container">
 			
 			<div id="header">  
-				<h1>Prim Minimum Cost Spanning Treeh</h1>
+				<h1>Prim Minimum Cost Spanning Tree</h1>
 			</div>
 			
 			<div = id = "mainContent"> 
@@ -63,10 +63,33 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>Prim(graph):
+  MST = []
+  key = {all nodes: infinity}
+  parent = {}
+  key[start] = 0
+  
+  for each vertex:
+    u = vertex with min key not in MST
+    add u to MST
+    
+    for neighbor of u not in MST:
+      if weight(u, neighbor) < key[neighbor]:
+        key[neighbor] = weight(u, neighbor)
+        parent[neighbor] = u</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Prim's algorithm finds the minimum spanning tree of a connected, weighted graph. It grows the MST by always adding the cheapest edge that connects a tree vertex to a non-tree vertex, similar to Dijkstra but for spanning trees.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->

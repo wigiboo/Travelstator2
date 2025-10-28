@@ -63,10 +63,30 @@
 					<table id="GeneralAnimationControls">  </table>		
 				</div>
 				
+				<!-- Pseudocode Section -->
+				<div id="pseudocodeSection">
+					<h3>PSEUDOCODE</h3>
+					<pre>Kruskal(graph):
+  sort all edges by weight
+  MST = []
+  disjoint_set = UnionFind(all nodes)
+  
+  for edge in sorted edges:
+    if find(u) != find(v):
+      add edge to MST
+      union(u, v)
+  
+  return MST</pre>
+					<div class="algorithm-explanation">
+						<h4>ALGORITHM EXPLANATION</h4>
+						Kruskal's algorithm finds the minimum spanning tree by sorting all edges and adding them greedily, skipping edges that would create cycles. It uses Union-Find to efficiently detect cycles. Very effective for sparse graphs.
+					</div>
+				</div>
+				
 			</div> <!-- mainContent -->
 			
 			<div id="footer">  
-				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+				<p><a href="Algorithms.html">HomePage</a></p>
 			</div>
 
 		</div><!-- container -->
